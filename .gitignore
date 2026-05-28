@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+venv_swaf/
+.venv/
+env/
+ENV/
+
+# Environment Variables (SENSITIVE)
+.env
+.env.*
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Large Model Files (Optional: keep if you want them in GitHub)
+# *.pkl
+
+# IDEs
+.vscode/
+.idea/

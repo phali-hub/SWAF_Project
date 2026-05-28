@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: swaf-backend
+    env: python
+    buildCommand: pip install -r Back-End/requirements.txt
+    startCommand: cd Back-End && gunicorn app:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_PORT
+        default: 3306
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: TARGET_SERVER
+        default: http://localhost:8080
+      - key: WAF_MODE
+        default: block
